@@ -1,0 +1,342 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+}
+
+:root {
+    --main-color: #ff9f0d;
+    --text-color: #fff;
+    --other-color: #212121;
+    --second-color: #9e9e9e;
+    --bg-color: #111111;
+    --big-font: 4.5rem;
+    --h2-font: 2.6rem;
+    --p-font: 1.1rem;
+    --b-color: #5880c9;
+}
+
+body{
+    background: url(../img/foodcentrehal.jpg);
+    color: var(--text-color);
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-color: #111111;
+}
+
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 30px 7%;
+    transition: all .50s ease;
+}
+
+header.sticky {
+    padding: 20px 10%;
+    background-color: var(--other-color);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    font-size: 33px;
+    font-weight: 700;
+}
+
+.logo i {
+    vertical-align: middle;
+    margin-right: 8px;
+    color: var(--main-color);
+}
+
+.navlist {
+    display: flex;
+}
+
+.navlist a {
+    color: var(--text-color);
+    font-size: var(--p-font);
+    font-weight: 600;
+    margin: 0 30px;
+    transition: all .50s ease;
+}
+
+.navlist a:hover {
+    color: var(--main-color);
+}
+
+.navlist a.active {
+    color: var(--main-color);
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    background: var(--main-color);
+    border-radius: 3rem;
+    box-shadow: var(--b-color) 0px 1px 25px;
+}
+
+.nav-icons i {
+    vertical-align: middle;
+    font-size: 25px;
+    color: var(--bg-color);
+    margin-right: 8px;
+    margin-left: 5px;
+    transition: all .50s ease;
+}
+
+#menu-icon {
+    font-size: 32px;
+    color: var(--bg-color);
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+.nav-icons i:hover {
+    transform: scale(1.1);
+    color: var(--text-color);
+}
+
+footer {
+    background-color: var(--other-color);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 12rem;
+    position: relative; /* Change from fixed to relative */
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: underline var(--main-color) 2px;
+}
+
+form {
+    margin-top: 10px;
+}
+
+input[type="email"] {
+    padding: 8px;
+    border-radius: 3rem;
+    width: 16rem;
+    box-shadow: var(--b-color) 0px 1px 15px;
+}
+
+button {
+    padding: 8px 10px;
+    margin: 0px 5px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 3rem;
+}
+
+button:hover {
+    transition: all .50s ease;
+    background: var(--main-color);
+    color: var(--bg-color);
+    box-shadow: var(--b-color) 0px 1px 25px;
+}
+.social-media a {
+    margin: 0 5px;
+    font-size: 24px;
+    color: var(--main-color); 
+  }
+  
+  .social-media a:hover {
+    color: #f0f0f0;
+    box-shadow: var(--b-color) 0px 1px 25px;
+    transform: scale(1.1) translateX(5px) translateY(-5px);
+    transition: all .50s ease;
+  }
+
+span {
+    color: var(--main-color);
+}
+
+body {
+    background: url('../img/roti.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: var(--text-color);
+}
+footer i.uper{
+    position: absolute;
+    right: 15rem; /* Position it on the right side */
+    bottom: 8rem; /* Adjust its distance from the bottom */
+    font-size: 3rem;
+    color: var(--main-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5rem;
+    background: var(--bg-color);
+    box-shadow: var(--main-color) 0px 4px 7px;
+}
+footer i.uper:hover {
+    transform: scale(1.1);
+    color: var(--text-color);
+    box-shadow: var(--b-color) 0px 5px 9px;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Make sure the section occupies full viewport height */
+    padding: 100px 20px; /* Add padding for spacing */
+    position: relative;
+    z-index: 2; /* Ensure the form stays above the footer */
+}
+
+.form-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    z-index: 3; /* Ensure the form stays above other elements */
+}
+
+.form-container h2 {
+    color: var(--main-color);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.form-container p {
+    color: var(--second-color);
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    color: var(--main-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid var(--second-color);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--main-color);
+    box-shadow: 0 0 10px var(--main-color);
+}
+
+.submit-btn {
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    position: relative;
+    z-index: 5;
+}
+
+.submit-btn:hover {
+    background-color: #e08e0b;
+}
+
+.success-message {
+    margin-top: 1rem;
+    color: var(--main-color);
+    font-size: 1.2rem;
+    visibility: hidden;
+}
+/* Modal Popup Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.close-btn {
+    color: var(--text-color);
+    float: right;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: var(--main-color);
+}
+
+/* Show the modal when it is triggered */
+.modal.show {
+    display: flex; /* Use flex to center the content */
+}
+
