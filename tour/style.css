@@ -19,30 +19,9 @@
     --h2-font: 2.6rem;
     --p-font: 1.1rem;
     --b-color: #5880c9;
-    --other-bg: rgba(33, 33, 33, 0.8);
-    --second-bg: rgba(158, 158, 158, 0.8);
-    --bg-bg: rgba(17, 17, 17, 0.8);
 }
 
-body {
-    color: var(--text-color);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: #111111;
-}
-.video-container {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Adjust height as needed */
-    overflow: hidden;
-  }
-  
-  video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
+/* General Navbar Styles */
 header {
     position: fixed;
     width: 100%;
@@ -54,12 +33,7 @@ header {
     justify-content: space-between;
     background: transparent;
     padding: 30px 7%;
-    transition: all .50s ease;
-}
-
-header.sticky {
-    padding: 20px 10%;
-    background-color: var(--other-color);
+    transition: all 0.5s ease;
 }
 
 .logo {
@@ -76,57 +50,121 @@ header.sticky {
     color: var(--main-color);
 }
 
+/* Desktop Navigation - Display Horizontally */
+/* Desktop Navigation - Display Horizontally */
 .navlist {
     display: flex;
+    gap: 20px;
+    
 }
 
 .navlist a {
     color: var(--text-color);
-    font-size: var(--p-font);
-    font-weight: 600;
-    margin: 0 30px;
-    transition: all .50s ease;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 15px;
 }
 
-.navlist a:hover {
-    color: var(--main-color);
-}
-
-.navlist a.active {
-    color: var(--main-color);
+.navlist.active {
+    display: block;
 }
 
 .nav-icons {
     display: flex;
     align-items: center;
-    padding: 8px 15px;
-    background: var(--main-color);
-    border-radius: 3rem;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 20px;
+    background-color: var(--main-color);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
     box-shadow: var(--b-color) 0px 1px 25px;
 }
-
-.nav-icons i {
-    vertical-align: middle;
-    font-size: 25px;
+.nav-icons i{
     color: var(--bg-color);
-    margin-right: 8px;
-    margin-left: 5px;
-    transition: all .50s ease;
 }
-
-#menu-icon {
-    font-size: 32px;
-    color: var(--bg-color);
-    z-index: 10001;
-    cursor: pointer;
-    display: none;
-}
-
-.nav-icons i:hover {
-    transform: scale(1.1);
+.nav-icons i:hover{
     color: var(--text-color);
 }
 
+/* Hamburger Menu Icon */
+.menu-button {
+    display: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: var(--b-color) 0px 1px 25px;
+}
+/* Close Button */
+.close-nav {
+    display: none;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: var(--b-color) 0px 1px 25px;
+}
+
+
+
+/* Media Query for Mobile */
+@media (max-width: 1125px) {
+    .navlist, .nav-icons {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        background: var(--bg-color);
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .close-nav {
+        display: block;
+    }
+
+    /* Show navlist when active */
+    .navlist.active {
+        display: flex;
+    }
+
+    .menu-button {
+        display: block;
+    }
+}
+a.active{
+    color: var(--main-color);
+}
+header.sticky {
+    padding: 20px 9.2%;
+    background-color: var(--other-color);
+}
+body {
+    background: url(../img/Beauty\ of\ Karachi\ .mp4);
+    color: var(--text-color);
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* No repetition of the image */
+    background-color: #111111; /* Fallback background color in case the image doesn't load */
+    height: 100vh; /* Make the section height fill the entire viewport */
+    width: 100%; /* Ensure full width coverage */
+}
+@media (max-width: 768px) {
+    body {
+        background-size: cover; /* Ensure full screen coverage on mobile */
+        height: 100vh; /* Height of the section will cover the entire viewport */
+    }}
 section {
     padding: 70px 14% 60px;
 }
@@ -141,7 +179,18 @@ section {
     align-items: center;
     gap: 2rem;
 }
-
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust height as needed */
+    overflow: hidden;
+  }
+  
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 .story-container {
     text-align: center;
     background-color: var(--other-bg);
@@ -209,48 +258,48 @@ span {
     background-color: var(--other-color);
 }
 footer {
-    position: relative; /* Ensure the icon is positioned relative to the footer */
+    position: relative;
     background-color: var(--other-color);
     color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    height: 12rem;
+    padding: 20px;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 1000;
 }
-  nav ul {
+
+nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-  }
-  
-  nav ul li {
+}
+
+nav ul li {
     display: inline-block;
     margin: 0 10px;
-  }
-  
-  nav a {
+}
+
+nav a {
     color: var(--text-color);
     text-decoration: underline var(--main-color) 2px;
+}
 
-  }
-  
-  form {
+form {
     margin-top: 10px;
-  }
-  
-  input[type="email"] {
+}
+
+input[type="email"] {
     padding: 8px;
     border-radius: 3rem;
     width: 16rem;
     box-shadow: var(--b-color) 0px 1px 15px;
-  }
-  
-  button {
+}
+
+button {
     padding: 8px 10px;
     margin: 0px 5px;
     background-color: #333;
@@ -258,35 +307,38 @@ footer {
     border: none;
     cursor: pointer;
     border-radius: 3rem;
-  }
-  button:hover{
+}
+
+button:hover {
     transition: all .50s ease;
     background: var(--main-color);
     color: var(--bg-color);
     box-shadow: var(--b-color) 0px 1px 25px;
-  }
-  .social-media {
+}
+
+.social-media {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-  }
-  
-  .social-media a {
+}
+
+.social-media a {
     margin: 0 5px;
     font-size: 24px;
-    color: var(--main-color); 
-  }
-  
-  .social-media a:hover {
+    color: var(--main-color);
+}
+
+.social-media a:hover {
     color: #f0f0f0;
     box-shadow: var(--b-color) 0px 1px 25px;
     transform: scale(1.1) translateX(5px) translateY(-5px);
     transition: all .50s ease;
-  }
-footer i.uper{
+}
+
+footer i.uper {
     position: absolute;
-    right: 15rem; /* Position it on the right side */
-    bottom: 8rem; /* Adjust its distance from the bottom */
+    right: 15rem;
+    bottom: 8rem;
     font-size: 3rem;
     color: var(--main-color);
     cursor: pointer;
@@ -295,8 +347,73 @@ footer i.uper{
     background: var(--bg-color);
     box-shadow: var(--main-color) 0px 4px 7px;
 }
+
 footer i.uper:hover {
     transform: scale(1.1);
     color: var(--text-color);
     box-shadow: var(--b-color) 0px 5px 9px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    footer {
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        display: flex;
+        flex-direction: col;
+        margin: 5px 0;
+    }
+
+    input[type="email"] {
+        width: 100%;
+    }
+
+    .social-media {
+        flex-direction: row;
+    }
+
+    .social-media a {
+        font-size: 30px;
+        margin: 10px 0;
+    }
+
+    footer i.uper {
+        right: 2rem;
+        bottom: 5rem;
+        font-size: 2.5rem;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 3px 0;
+    }
+
+    input[type="email"] {
+        width: 100%;
+    }
+
+    .social-media a {
+        font-size: 24px;
+        margin: 8px 0;
+    }
+
+    footer i.uper {
+        right: 1rem;
+        bottom: 3rem;
+        font-size: 2rem;
+    }
 }

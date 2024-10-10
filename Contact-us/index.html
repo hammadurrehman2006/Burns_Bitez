@@ -19,22 +19,23 @@
 
   <body>
     <header>
-      <a href="../index.html" class="logo"
-        ><i class="bx bxs-hot"></i>Burns&nbsp;<span>Bitez</span></a
-      >
-      <ul class="navlist">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../About/index.html">About Us</a></li>
-        <li><a href="../sign/index.html">Order Now</a></li>
-        <li><a href="../Reviews/index.html">Reviews</a></li>
-        <li><a href="../Contact-us/index.html" class="active">Contact Us</a></li>
+      <a href="../index.html" class="logo"><i class="bx bxs-hot"></i>Burns&nbsp;<span>Bitez</span></a>
+      <ul class="navlist" id="navlist">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../About/index.html">About Us</a></li>
+          <li><a href="../sign/index.html">Order Now</a></li>
+          <li><a href="../Reviews/index.html">Reviews</a></li>
+          <li><a href="../Contact-us/index.html" class="active">Contact Us</a></li>
+          <!-- Add a close button inside the navbar -->
+          <li><button id="close-nav" class="close-nav">Close Menu</button></li>
       </ul>
       <div class="nav-icons">
-        <a href="#"><i class="bx bx-search-alt"></i></a>
-        <a href="#"><i class="bx bx-cart"></i></a>
-        <div class="bx bx-men"></div>
+          <a href="#"><i class="bx bx-search-alt"></i></a>
+          <a href="#"><i class="bx bx-cart"></i></a>
       </div>
-    </header>
+      <!-- Create a button for mobile toggle -->
+      <button id="menu-button" class="menu-button">Menu</button>
+  </header>
     <section class="contact-section">
         <div class="form-container">
             <h2>Contact Us</h2>
@@ -112,6 +113,32 @@
       </footer>
   
       <script src="script.js"></script>
+      <script src="script.js"></script>
+    <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuButton = document.getElementById('menu-button');
+    const navlist = document.getElementById('navlist');
+    const closeNav = document.getElementById('close-nav');
+
+    // Toggle the navlist when clicking the menu button
+    menuButton.addEventListener('click', () => {
+        navlist.classList.toggle('active');
+    });
+
+    // Close the navlist when clicking the close button
+    closeNav.addEventListener('click', () => {
+        navlist.classList.remove('active');
+    });
+
+    // Close the navlist when clicking outside of it
+    document.addEventListener('click', (e) => {
+        if (!navlist.contains(e.target) && !menuButton.contains(e.target)) {
+            navlist.classList.remove('active');
+        }
+    });
+});
+
+  </script>
     </body>
   </html>
   

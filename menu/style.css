@@ -25,56 +25,106 @@
 }
 
 body {
-    position: relative; /* Required for absolute positioning of the overlay */
+    position: relative;
+    /* Required for absolute positioning of the overlay */
     background: url(../img/charga.webp);
-    background-size: cover; /* Ensures the image covers the entire screen */
-    background-position: center; /* Centers the image */
-    background-attachment: fixed; /* Keeps the background fixed when scrolling */
-    background-repeat: no-repeat; /* Prevents repeating */
+    background-size: cover;
+    /* Ensures the image covers the entire screen */
+    background-position: center;
+    /* Centers the image */
+    background-attachment: fixed;
+    /* Keeps the background fixed when scrolling */
+    background-repeat: no-repeat;
+    /* Prevents repeating */
     color: var(--text-color);
+    background-size: cover;
+    color: var(--text-color);
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* No repetition of the image */
+    background-color: #111111; /* Fallback background color in case the image doesn't load */
+    height: 100vh; /* Make the section height fill the entire viewport */
+    width: 100%; /* Ensure full width coverage */
+}
+@media (max-width: 768px) {
+    body {
+        background-size: cover; /* Ensure full screen coverage on mobile */
+        height: 100vh; /* Height of the section will cover the entire viewport */
+    }}
+header.sticky {
+    padding: 20px 9.2%;
+    background-color: var(--other-color);
+}
+a.active{
+    color: var(--main-color);
 }
 
-header::before{
-    content: ''; /* Required for the pseudo-element */
-    position: absolute; /* Position it absolutely to cover the body */
+header::before {
+    content: '';
+    /* Required for the pseudo-element */
+    position: absolute;
+    /* Position it absolutely to cover the body */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.39); /* Semi-transparent black overlay */
-    z-index: -1; /* Place it below any text or content */
+    background: rgba(0, 0, 0, 0.39);
+    /* Semi-transparent black overlay */
+    z-index: -1;
+    /* Place it below any text or content */
 }
-body::before{
-    content: ''; /* Required for the pseudo-element */
-    position: absolute; /* Position it absolutely to cover the body */
+
+span {
+    color: var(--main-color);
+}
+
+body::before {
+    content: '';
+    /* Required for the pseudo-element */
+    position: absolute;
+    /* Position it absolutely to cover the body */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.39); /* Semi-transparent black overlay */
-    z-index: -1; /* Place it below any text or content */
+    background: rgba(0, 0, 0, 0.39);
+    /* Semi-transparent black overlay */
+    z-index: -1;
+    /* Place it below any text or content */
 }
 
 .overlay {
-    position: fixed; /* Position it fixed to cover the entire viewport */
+    position: fixed;
+    /* Position it fixed to cover the entire viewport */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.39); /* Adjusted for a darker semi-transparent black overlay */
-    z-index: -1; /* Place it below any text or content */
+    background: rgba(0, 0, 0, 0.39);
+    /* Adjusted for a darker semi-transparent black overlay */
+    z-index: -1;
+    /* Place it below any text or content */
 }
 
 .middle-text {
-    position: relative; /* Position relative to position text above the overlay */
-    text-align: center; /* Center the text */
-    padding: 20px; /* Add some padding around the text */
-    color: #fff; /* Text color */
-    z-index: 2; /* Place text above the overlay */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Optional: shadow for depth */
+    position: relative;
+    /* Position relative to position text above the overlay */
+    text-align: center;
+    /* Center the text */
+    padding: 20px;
+    /* Add some padding around the text */
+    color: #fff;
+    /* Text color */
+    z-index: 2;
+    /* Place text above the overlay */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* Optional: shadow for depth */
 }
 
 
+
+
+    
+/* General Navbar Styles */
 header {
     position: fixed;
     width: 100%;
@@ -86,10 +136,7 @@ header {
     justify-content: space-between;
     background: transparent;
     padding: 30px 7%;
-    transition: all .50s ease;
-}
-span{
-    color: var(--main-color);
+    transition: all 0.5s ease;
 }
 
 .logo {
@@ -106,61 +153,99 @@ span{
     color: var(--main-color);
 }
 
+/* Desktop Navigation - Display Horizontally */
+
 .navlist {
     display: flex;
+    gap: 20px;
 }
 
 .navlist a {
     color: var(--text-color);
-    font-size: var(--p-font);
+    font-size: 18px;
     font-weight: 600;
-    margin: 0 30px;
-    transition: all .50s ease;
+    padding: 10px 15px;
 }
 
-.navlist a:hover {
-    color: var(--main-color);
-}
-
-.navlist a.active {
-    color: var(--main-color);
-}
-header.sticky {
-    padding: 20px 9.2%;
-    background-color: var(--other-color);
+.navlist.active {
+    display: block;
 }
 
 .nav-icons {
     display: flex;
     align-items: center;
-    padding: 8px 15px;
-    background: var(--main-color);
-    border-radius: 3rem;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 20px;
+    background-color: var(--main-color);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
     box-shadow: var(--b-color) 0px 1px 25px;
 }
-
-.nav-icons i {
-    vertical-align: middle;
-    font-size: 25px;
+.nav-icons i{
     color: var(--bg-color);
-    margin-right: 8px;
-    margin-left: 5px;
-    transition: all .50s ease;
 }
-
-#menu-icon {
-    font-size: 32px;
-    color: var(--bg-color);
-    z-index: 10001;
-    cursor: pointer;
-    display: none;
-}
-
-.nav-icons i:hover {
-    transform: scale(1.1);
+.nav-icons i:hover{
     color: var(--text-color);
 }
 
+/* Hamburger Menu Icon */
+.menu-button {
+    display: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+/* Close Button */
+.close-nav {
+    display: none;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+
+/* Media Query for Mobile */
+@media (max-width: 1125px) {
+    .nav-icons{
+        display: none;
+    }
+    .navlist {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        background: var(--bg-color);
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .close-nav {
+        display: block;
+    }
+
+    /* Show navlist when active */
+    .navlist.active {
+        display: flex;
+    }
+
+    .menu-button {
+        display: block;
+    }
+}
 .middle-text {
     text-align: center;
     margin-bottom: 4rem;
@@ -177,9 +262,11 @@ header.sticky {
     font-size: var(--h2-font);
     color: var(--text-color);
 }
-.shop{
+
+.shop {
     margin-top: 120px;
 }
+
 .shop-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -286,15 +373,16 @@ header.sticky {
     text-align: center;
     margin-top: 4rem;
 }
+
 footer {
-    position: relative; /* Ensure the icon is positioned relative to the footer */
+    position: relative;
     background-color: var(--other-color);
     color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    height: 12rem;
+    padding: 20px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -315,7 +403,6 @@ nav ul li {
 nav a {
     color: var(--text-color);
     text-decoration: underline var(--main-color) 2px;
-
 }
 
 form {
@@ -355,19 +442,101 @@ button:hover {
 .social-media a {
     margin: 0 5px;
     font-size: 24px;
-    color: var(--main-color); 
-  }
-  
-  .social-media a:hover {
+    color: var(--main-color);
+}
+
+.social-media a:hover {
     color: #f0f0f0;
     box-shadow: var(--b-color) 0px 1px 25px;
     transform: scale(1.1) translateX(5px) translateY(-5px);
     transition: all .50s ease;
-  }
+}
 
+footer i.uper {
+    position: absolute;
+    right: 15rem;
+    bottom: 8rem;
+    font-size: 3rem;
+    color: var(--main-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5rem;
+    background: var(--bg-color);
+    box-shadow: var(--main-color) 0px 4px 7px;
+}
+
+footer i.uper:hover {
+    transform: scale(1.1);
+    color: var(--text-color);
+    box-shadow: var(--b-color) 0px 5px 9px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    footer {
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        display: flex;
+        flex-direction: col;
+        margin: 5px 0;
+    }
+
+    input[type="email"] {
+        width: 100%;
+    }
+
+    .social-media {
+        flex-direction: row;
+    }
+
+    .social-media a {
+        font-size: 30px;
+        margin: 10px 0;
+    }
+
+    footer i.uper {
+        right: 2rem;
+        bottom: 5rem;
+        font-size: 2.5rem;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 3px 0;
+    }
+
+    input[type="email"] {
+        width: 100%;
+    }
+
+    .social-media a {
+        font-size: 24px;
+        margin: 8px 0;
+    }
+
+    footer i.uper {
+        right: 1rem;
+        bottom: 3rem;
+        font-size: 2rem;
+    }
+}
 
 /* Responsive Adjustments */
-@media (max-width: 768px) {
+@media (max-width: 1125px) {
     .row img {
         height: 160px;
     }

@@ -1,241 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Menu-Burns Bitez</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
-    <link rel="stylesheet"
-    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <a href="../index.html" class="logo"><i class="bx bxs-hot"></i>Burns&nbsp;<span>Bitez</span></a>
-        <ul class="navlist">
-          <li><a href="../index.html" class="active">Home</a></li>
-          <li><a href="../About/index.html">About Us</a></li>
-          <li><a href="../sign/index.html">Order Now</a></li>
-          <li><a href="../Reviews/index.html">Reviews</a></li>
-          <li><a href="../Contact-us/index.html">Contact Us</a></li>
-        </ul>
-        <div class="nav-icons">
-          <a href="#"><i class="bx bx-search-alt"></i></a>
-          <a href="#"><i class="bx bx-cart"></i></a>
-          <div class="bx bx-men"></div>
-        </div>
-      </header>
+      <a href="../index.html" class="logo"
+        ><i class="bx bxs-hot"></i>Burns&nbsp;<span>Bitez</span></a
+      >
+      <ul class="navlist" id="navlist">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../About/index.html">About Us</a></li>
+        <li><a href="../sign/index.html" class="active">Order Now</a></li>
+        <li><a href="../Reviews/index.html">Reviews</a></li>
+        <li><a href="../Contact-us/index.html">Contact Us</a></li>
+        <!-- Add a close button inside the navbar -->
+        <li><button id="close-nav" class="close-nav">Close Menu</button></li>
+      </ul>
+      <div class="nav-icons">
+        <a href="#"><i class="bx bx-search-alt"></i></a>
+        <a href="#"><i class="bx bx-cart"></i></a>
+      </div>
+      <!-- Create a button for mobile toggle -->
+      <button id="menu-button" class="menu-button">Menu</button>
+    </header>
     <section class="shop" id="shop">
-        <div class="middle-text">
-           <h4>Our shop</h4>
-           <h2>Let's Check Popular Products</h2>
+      <div class="middle-text">
+        <h4>Our shop</h4>
+        <h2>Let's Check Popular Products</h2>
+      </div>
+
+      <div class="shop-content">
+        <div class="row">
+          <img src="../img/food/pz.png" alt="Cheese Pizza" />
+          <h3>Cheese Pizza</h3>
+          <p>It is a long established fact that a reader</p>
+          <div class="in-text">
+            <div class="price">
+              <h6>$21.00</h6>
+            </div>
+            <div class="s-btnn">
+              <a href="./product/index.html">Order now</a>
+            </div>
+          </div>
+          <div class="top-icon">
+            <a href="#"><i class="bx bx-heart"></i></a>
+          </div>
         </div>
 
-        <div class="shop-content">
-            <div class="row">
-                <img src="../img/food/pz.png" alt="Cheese Pizza">
-                <h3>Cheese Pizza</h3>
-                <p>It is a long established fact that a reader</p>
-                <div class="in-text">
-                    <div class="price">
-                        <h6>$21.00</h6>
-                    </div>
-                    <div class="s-btnn">
-                        <a href="./product/index.html">Order now</a>
-                    </div>
-                </div>
-                <div class="top-icon">
-                    <a href="#"><i class='bx bx-heart'></i></a>
-                </div>
+        <div class="row">
+          <img src="../img/food/piza.png" alt="Pepperoni Pizza" />
+          <h3>Pepperoni Pizza</h3>
+          <p>It is a long established fact that a reader</p>
+          <div class="in-text">
+            <div class="price">
+              <h6>$15.00</h6>
             </div>
-
-            <div class="row">
-                <img src="../img/food/piza.png" alt="Pepperoni Pizza">
-                <h3>Pepperoni Pizza</h3>
-                <p>It is a long established fact that a reader</p>
-                <div class="in-text">
-                    <div class="price">
-                        <h6>$15.00</h6>
-                    </div>
-                    <div class="s-btnn">
-                        <a href="./product/index.html">Order now</a>
-                    </div>
-                </div>
-                <div class="top-icon">
-                    <a href="#"><i class='bx bx-heart'></i></a>
-                </div>
-            </div>  
-
-            <div class="row">
-                <img src="../img/food/ger.png" alt="Smash Burger">
-                <h3>Smash Burger</h3>
-                <p>It is a long established fact that a reader</p>
-                <div class="in-text">
-                    <div class="price">
-                        <h6>$18.00</h6>
-                    </div>
-                    <div class="s-btnn">
-                        <a href="./product/index.html">Order now</a>
-                    </div>
-                </div>
-                <div class="top-icon">
-                    <a href="./product/index.html"><i class='bx bx-heart'></i></a>
-                </div>
+            <div class="s-btnn">
+              <a href="./product/index.html">Order now</a>
             </div>
+          </div>
+          <div class="top-icon">
+            <a href="#"><i class="bx bx-heart"></i></a>
+          </div>
         </div>
 
-        <div class="shop-content">
-            <div class="row">
-                <img src="../img/food/bur.png" alt="Beef Burger">
-                <h3>Beef Burger</h3>
-                <p>It is a long established fact that a reader</p>
-                <div class="in-text">
-                    <div class="price">
-                        <h6>$20.00</h6>
-                    </div>
-                    <div class="s-btnn">
-                        <a href="./product/index.html">Order now</a>
-                    </div>
-                </div>
-                <div class="top-icon">
-                    <a href="#"><i class='bx bx-heart'></i></a>
-                </div>
+        <div class="row">
+          <img src="../img/food/ger.png" alt="Smash Burger" />
+          <h3>Smash Burger</h3>
+          <p>It is a long established fact that a reader</p>
+          <div class="in-text">
+            <div class="price">
+              <h6>$18.00</h6>
             </div>
-
-            <div class="row">
-                <img src="../img/food/mutkhi.png" alt="Mutton Karahi">
-                <h3>Mutton Karahi</h3>
-                <p>It is a long established fact that a reader</p>
-                <div class="in-text">
-                    <div class="price">
-                        <h6>$45.00</h6>
-                    </div>
-                    <div class="s-btnn">
-                        <a href="./product/index.html">Order now</a>
-                    </div>
-                </div>
-                <div class="top-icon">
-                    <a href="#"><i class='bx bx-heart'></i></a>
-                </div>
+            <div class="s-btnn">
+              <a href="./product/index.html">Order now</a>
             </div>
-
-            <div class="row">
-                <img src="../img/food/ckh.png" alt="Chicken Karahi">
-                <h3>Chicken Karahi</h3>
-                <p>It is a long established fact that a reader</p>
-                <div class="in-text">
-                    <div class="price">
-                        <h6>$32.00</h6>
-                    </div>
-                    <div class="s-btnn">
-                        <a href="./product/index.html">Order now</a>
-                    </div>
-                </div>
-                <div class="top-icon">
-                    <a href="#"><i class='bx bx-heart'></i></a>
-                </div>
-            </div>
+          </div>
+          <div class="top-icon">
+            <a href="./product/index.html"><i class="bx bx-heart"></i></a>
+          </div>
         </div>
-        <div class="shop-content">
-            <div class="row">
-                <img src="../img/food/char.png" alt="Beef Burger">
-                <h3>Chicken Charga</h3>
-                <p>It is a long established fact that a reader</p>
-                <div class="in-text">
-                    <div class="price">
-                        <h6>$25.00</h6>
-                    </div>
-                    <div class="s-btnn">
-                        <a href="./product/index.html">Order now</a>
-                    </div>
-                </div>
-                <div class="top-icon">
-                    <a href="#"><i class='bx bx-heart'></i></a>
-                </div>
-            </div>
+      </div>
 
-            <div class="row">
-                <img src="../img/food/bir.png" alt="Mutton Karahi">
-                <h3>Biryani</h3>
-                <p>It is a long established fact that a reader</p>
-                <div class="in-text">
-                    <div class="price">
-                        <h6>$45.00</h6>
-                    </div>
-                    <div class="s-btnn">
-                        <a href="./product/index.html">Order now</a>
-                    </div>
-                </div>
-                <div class="top-icon">
-                    <a href="#"><i class='bx bx-heart'></i></a>
-                </div>
+      <div class="shop-content">
+        <div class="row">
+          <img src="../img/food/bur.png" alt="Beef Burger" />
+          <h3>Beef Burger</h3>
+          <p>It is a long established fact that a reader</p>
+          <div class="in-text">
+            <div class="price">
+              <h6>$20.00</h6>
             </div>
-
-            <div class="row">
-                <img src="../img/food/spckhi.png" alt="Chicken Karahi">
-                <h3>Chicken Spicy Karahi</h3>
-                <p>It is a long established fact that a reader</p>
-                <div class="in-text">
-                    <div class="price">
-                        <h6>$32.00</h6>
-                    </div>
-                    <div class="s-btnn">
-                        <a href="./product/index.html">Order now</a>
-                    </div>
-                </div>
-                <div class="top-icon">
-                    <a href="#"><i class='bx bx-heart'></i></a>
-                </div>
+            <div class="s-btnn">
+              <a href="./product/index.html">Order now</a>
             </div>
+          </div>
+          <div class="top-icon">
+            <a href="#"><i class="bx bx-heart"></i></a>
+          </div>
         </div>
+
+        <div class="row">
+          <img src="../img/food/mutkhi.png" alt="Mutton Karahi" />
+          <h3>Mutton Karahi</h3>
+          <p>It is a long established fact that a reader</p>
+          <div class="in-text">
+            <div class="price">
+              <h6>$45.00</h6>
+            </div>
+            <div class="s-btnn">
+              <a href="./product/index.html">Order now</a>
+            </div>
+          </div>
+          <div class="top-icon">
+            <a href="#"><i class="bx bx-heart"></i></a>
+          </div>
+        </div>
+
+        <div class="row">
+          <img src="../img/food/ckh.png" alt="Chicken Karahi" />
+          <h3>Chicken Karahi</h3>
+          <p>It is a long established fact that a reader</p>
+          <div class="in-text">
+            <div class="price">
+              <h6>$32.00</h6>
+            </div>
+            <div class="s-btnn">
+              <a href="./product/index.html">Order now</a>
+            </div>
+          </div>
+          <div class="top-icon">
+            <a href="#"><i class="bx bx-heart"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="shop-content">
+        <div class="row">
+          <img src="../img/food/char.png" alt="Beef Burger" />
+          <h3>Chicken Charga</h3>
+          <p>It is a long established fact that a reader</p>
+          <div class="in-text">
+            <div class="price">
+              <h6>$25.00</h6>
+            </div>
+            <div class="s-btnn">
+              <a href="./product/index.html">Order now</a>
+            </div>
+          </div>
+          <div class="top-icon">
+            <a href="#"><i class="bx bx-heart"></i></a>
+          </div>
+        </div>
+
+        <div class="row">
+          <img src="../img/food/bir.png" alt="Mutton Karahi" />
+          <h3>Biryani</h3>
+          <p>It is a long established fact that a reader</p>
+          <div class="in-text">
+            <div class="price">
+              <h6>$45.00</h6>
+            </div>
+            <div class="s-btnn">
+              <a href="./product/index.html">Order now</a>
+            </div>
+          </div>
+          <div class="top-icon">
+            <a href="#"><i class="bx bx-heart"></i></a>
+          </div>
+        </div>
+
+        <div class="row">
+          <img src="../img/food/spckhi.png" alt="Chicken Karahi" />
+          <h3>Chicken Spicy Karahi</h3>
+          <p>It is a long established fact that a reader</p>
+          <div class="in-text">
+            <div class="price">
+              <h6>$32.00</h6>
+            </div>
+            <div class="s-btnn">
+              <a href="./product/index.html">Order now</a>
+            </div>
+          </div>
+          <div class="top-icon">
+            <a href="#"><i class="bx bx-heart"></i></a>
+          </div>
+        </div>
+      </div>
     </section>
     <footer>
-        <a href="#"><i class="bx uper bx-chevrons-up"></i></a>
-        <nav>
-          <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../About/index.html">About</a></li>
-            <li><a href="../Contact-us/index.html">Contact Us</a></li>
-            <li><a href="../sign/index.html">Order Now</a></li>
-            <li><a href="../Reviews/index.html">Reviews</a></li>
-            <li><a href="../tour/index.html">Quick Tour</a></li>
-          </ul>
-        </nav>
-        <form>
-          <label for="newsletter-email">Subscribe to our newsletter:</label>
-          <input
-            type="email"
-            id="newsletter-email"
-            name="newsletter-email"
-            placeholder="Enter your email"
-          />
-          <button type="submit">Subscribe</button>
-        </form>
-        <div class="social-media">
-          <a src="www.facebook.com"><i class="bx bxl-facebook-circle"></i></a>
-          <a src="www.twitter.com"><i class="bx bxl-twitter"></i></a>
-          <a src="www.instagram.com"><i class="bx bxl-instagram-alt"></i></a>
-          <a src="www.linkedin.com"><i class="bx bxl-linkedin-square"></i></a>
-        </div>
-  
-        <p>
-          &copy; 2025 Burns Bitez. All rights reserved.<br />
-          Created by: Muhammad Hammad-ur-Rehman.
-        </p>
-      </footer>
+      <a href="#"><i class="bx uper bx-chevrons-up"></i></a>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../About/index.html">About</a></li>
+          <li><a href="../Contact-us/index.html">Contact Us</a></li>
+          <li><a href="../sign/index.html">Order Now</a></li>
+          <li><a href="../Reviews/index.html">Reviews</a></li>
+          <li><a href="../tour/index.html">Quick Tour</a></li>
+        </ul>
+      </nav>
+      <form>
+        <label for="newsletter-email">Subscribe to our newsletter:</label>
+        <input
+          type="email"
+          id="newsletter-email"
+          name="newsletter-email"
+          placeholder="Enter your email"
+        />
+        <button type="submit">Subscribe</button>
+      </form>
+      <div class="social-media">
+        <a src="www.facebook.com"><i class="bx bxl-facebook-circle"></i></a>
+        <a src="www.twitter.com"><i class="bx bxl-twitter"></i></a>
+        <a src="www.instagram.com"><i class="bx bxl-instagram-alt"></i></a>
+        <a src="www.linkedin.com"><i class="bx bxl-linkedin-square"></i></a>
+      </div>
+
+      <p>
+        &copy; 2025 Burns Bitez. All rights reserved.<br />
+        Created by: Muhammad Hammad-ur-Rehman.
+      </p>
+    </footer>
+    <script src="script.js"></script>
     <script>
-        document.querySelectorAll('.top-icon i').forEach(icon => {
-            icon.addEventListener('click', function() {
-                this.classList.toggle('liked');
-            });
+      document.querySelectorAll(".top-icon i").forEach((icon) => {
+        icon.addEventListener("click", function () {
+          this.classList.toggle("liked");
         });
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuButton = document.getElementById("menu-button");
+        const navlist = document.getElementById("navlist");
+        const closeNav = document.getElementById("close-nav");
+
+        // Toggle the navlist when clicking the menu button
+        menuButton.addEventListener("click", () => {
+          navlist.classList.toggle("active");
+        });
+
+        // Close the navlist when clicking the close button
+        closeNav.addEventListener("click", () => {
+          navlist.classList.remove("active");
+        });
+
+        // Close the navlist when clicking outside of it
+        document.addEventListener("click", (e) => {
+          if (!navlist.contains(e.target) && !menuButton.contains(e.target)) {
+            navlist.classList.remove("active");
+          }
+        });
+      });
     </script>
     <script src="../script.js"></script>
-    
-
-</body>
+  </body>
 </html>

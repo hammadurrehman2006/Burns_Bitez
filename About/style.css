@@ -1,3 +1,18 @@
+body {
+    background: url(../img/foodcentrehal.jpg);
+    color: var(--text-color);
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* No repetition of the image */
+    background-color: #111111; /* Fallback background color in case the image doesn't load */
+    height: 100vh; /* Make the section height fill the entire viewport */
+    width: 100%; /* Ensure full width coverage */
+}
+@media (max-width: 768px) {
+    body {
+        background-size: cover; /* Ensure full screen coverage on mobile */
+        height: 100vh; /* Height of the section will cover the entire viewport */
+    }}
 * {
     padding: 0;
     margin: 0;
@@ -19,19 +34,9 @@
     --h2-font: 2.6rem;
     --p-font: 1.1rem;
     --b-color: #5880c9;
-    --other-bg: rgba(33, 33, 33, 0.8);
-    --second-bg: rgba(158, 158, 158, 0.8);
-    --bg-bg: rgba(17, 17, 17, 0.8);
 }
 
-body {
-    color: var(--text-color);
-    background: url(../img/foodcentrehal.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: #111111;
-}
-
+/* General Navbar Styles */
 header {
     position: fixed;
     width: 100%;
@@ -42,13 +47,8 @@ header {
     align-items: center;
     justify-content: space-between;
     background: transparent;
-    padding: 25px 7%;
-    transition: all .50s ease;
-}
-
-header.sticky {
-    padding: 20px 9.2%;
-    background-color: var(--other-color);
+    padding: 30px 7%;
+    transition: all 0.5s ease;
 }
 
 .logo {
@@ -65,66 +65,106 @@ header.sticky {
     color: var(--main-color);
 }
 
+/* Desktop Navigation - Display Horizontally */
+/* Desktop Navigation - Display Horizontally */
 .navlist {
     display: flex;
+    gap: 20px;
 }
 
 .navlist a {
     color: var(--text-color);
-    font-size: var(--p-font);
+    font-size: 18px;
     font-weight: 600;
-    margin: 0 30px;
-    transition: all .50s ease;
+    padding: 10px 15px;
 }
 
-.navlist a:hover {
-    color: var(--main-color);
+header.sticky {
+    padding: 20px 9.2%;
+    background-color: var(--other-color);
 }
 
-.navlist a.active {
-    color: var(--main-color);
+.navlist.active {
+    display: block;
 }
 
 .nav-icons {
     display: flex;
     align-items: center;
-    padding: 8px 15px;
-    background: var(--main-color);
-    border-radius: 3rem;
-    box-shadow: var(--b-color) 0px 1px 25px;
+    gap: 10px;
 }
 
-.nav-icons i {
-    vertical-align: middle;
-    font-size: 25px;
-    color: var(--bg-color);
-    margin-right: 8px;
-    margin-left: 5px;
-    transition: all .50s ease;
-}
-
-#menu-icon {
-    font-size: 32px;
-    color: var(--bg-color);
-    z-index: 10001;
-    cursor: pointer;
+/* Hamburger Menu Icon */
+.menu-button {
     display: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-.nav-icons i:hover {
-    transform: scale(1.1);
+/* Close Button */
+.close-nav {
+    display: none;
+    background-color: var(--main-color);
     color: var(--text-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+a.active {
+    color: var(--main-color);
+}
+
+
+/* Media Query for Mobile */
+@media (max-width: 1125px) {
+    .navlist {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        background: var(--bg-color);
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .close-nav {
+        display: block;
+    }
+
+    /* Show navlist when active */
+    .navlist.active {
+        display: flex;
+    }
+
+    .menu-button {
+        display: block;
+    }
+}
+
+header.sticky {
+    padding: 20px 9.2%;
+    background-color: var(--other-color);
 }
 
 footer {
-    position: relative; /* Ensure the icon is positioned relative to the footer */
+    position: relative;
     background-color: var(--other-color);
     color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    height: 12rem;
+    padding: 20px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -145,7 +185,6 @@ nav ul li {
 nav a {
     color: var(--text-color);
     text-decoration: underline var(--main-color) 2px;
-
 }
 
 form {
@@ -185,15 +224,98 @@ button:hover {
 .social-media a {
     margin: 0 5px;
     font-size: 24px;
-    color: var(--main-color); 
-  }
-  
-  .social-media a:hover {
+    color: var(--main-color);
+}
+
+.social-media a:hover {
     color: #f0f0f0;
     box-shadow: var(--b-color) 0px 1px 25px;
     transform: scale(1.1) translateX(5px) translateY(-5px);
     transition: all .50s ease;
-  }
+}
+
+footer i.uper {
+    position: absolute;
+    right: 15rem;
+    bottom: 8rem;
+    font-size: 3rem;
+    color: var(--main-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5rem;
+    background: var(--bg-color);
+    box-shadow: var(--main-color) 0px 4px 7px;
+}
+
+footer i.uper:hover {
+    transform: scale(1.1);
+    color: var(--text-color);
+    box-shadow: var(--b-color) 0px 5px 9px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    footer {
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        display: flex;
+        flex-direction: col;
+        margin: 5px 0;
+    }
+
+    input[type="email"] {
+        width: 100%;
+    }
+
+    .social-media {
+        flex-direction: row;
+    }
+
+    .social-media a {
+        font-size: 30px;
+        margin: 10px 0;
+    }
+
+    footer i.uper {
+        right: 2rem;
+        bottom: 5rem;
+        font-size: 2.5rem;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 3px 0;
+    }
+
+    input[type="email"] {
+        width: 100%;
+    }
+
+    .social-media a {
+        font-size: 24px;
+        margin: 8px 0;
+    }
+
+    footer i.uper {
+        right: 1rem;
+        bottom: 3rem;
+        font-size: 2rem;
+    }
+}
 
 .about-section {
     margin-top: 15rem;
@@ -207,15 +329,18 @@ button:hover {
     animation: fadeIn 1.5s ease;
     opacity: 0.9;
 }
-.about-section:hover{
+
+.about-section:hover {
     box-shadow: 0 4px 15px var(--main-color);
 }
 
-.about-section h2, .about-section h3 {
+.about-section h2,
+.about-section h3 {
     color: var(--text-color);
 }
 
-.about-section p, .about-section ul {
+.about-section p,
+.about-section ul {
     font-size: var(--p-font);
     line-height: 1.8;
 }
@@ -235,18 +360,23 @@ ul {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
-span{
+
+span {
     color: var(--main-color);
 }
-footer i.uper{
-    position:absolute;
-    right: 15rem; /* Position it on the right side */
-    bottom: 2rem; /* Adjust its distance from the bottom */
+
+footer i.uper {
+    position: absolute;
+    right: 15rem;
+    /* Position it on the right side */
+    bottom: 2rem;
+    /* Adjust its distance from the bottom */
     font-size: 3rem;
     color: var(--main-color);
     cursor: pointer;
@@ -254,7 +384,9 @@ footer i.uper{
     border-radius: 5rem;
     background: var(--bg-color);
 }
+
 footer i.uper:hover {
     transform: scale(1.1);
-    color: var(--text-color); /* Changes color on hover */
+    color: var(--text-color);
+    /* Changes color on hover */
 }

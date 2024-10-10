@@ -24,12 +24,20 @@
 body {
     background: url(../img/samosa.jpg);
     color: var(--text-color);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: #111111;
-
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* No repetition of the image */
+    background-color: #111111; /* Fallback background color in case the image doesn't load */
+    height: 100vh; /* Make the section height fill the entire viewport */
+    width: 100%; /* Ensure full width coverage */
 }
+@media (max-width: 768px) {
+    body {
+        background-size: cover; /* Ensure full screen coverage on mobile */
+        height: 100vh; /* Height of the section will cover the entire viewport */
+    }}
 
+/* General Navbar Styles */
 header {
     position: fixed;
     width: 100%;
@@ -41,7 +49,7 @@ header {
     justify-content: space-between;
     background: transparent;
     padding: 30px 7%;
-    transition: all .50s ease;
+    transition: all 0.5s ease;
 }
 
 .logo {
@@ -58,55 +66,112 @@ header {
     color: var(--main-color);
 }
 
+/* Desktop Navigation - Display Horizontally */
+/* Desktop Navigation - Display Horizontally */
 .navlist {
     display: flex;
+    gap: 20px;
+
 }
 
 .navlist a {
     color: var(--text-color);
-    font-size: var(--p-font);
-    font-weight: 600;
-    margin: 0 30px;
-    transition: all .50s ease;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 15px;
 }
 
-.navlist a:hover {
-    color: var(--main-color);
-}
-
-.navlist a.active {
-    color: var(--main-color);
+.navlist.active {
+    display: block;
 }
 
 .nav-icons {
     display: flex;
     align-items: center;
-    padding: 8px 15px;
-    background: var(--main-color);
-    border-radius: 3rem;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 20px;
+    background-color: var(--main-color);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
     box-shadow: var(--b-color) 0px 1px 25px;
 }
 
 .nav-icons i {
-    vertical-align: middle;
-    font-size: 25px;
     color: var(--bg-color);
-    margin-right: 8px;
-    margin-left: 5px;
-    transition: all .50s ease;
-}
-
-#menu-icon {
-    font-size: 32px;
-    color: var(--bg-color);
-    z-index: 10001;
-    cursor: pointer;
-    display: none;
 }
 
 .nav-icons i:hover {
-    transform: scale(1.1);
     color: var(--text-color);
+}
+
+/* Hamburger Menu Icon */
+.menu-button {
+    display: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: var(--b-color) 0px 1px 25px;
+}
+
+/* Close Button */
+.close-nav {
+    display: none;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: var(--b-color) 0px 1px 25px;
+}
+
+
+
+/* Media Query for Mobile */
+@media (max-width: 1125px) {
+ 
+    .navlist,
+    .nav-icons {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        background: var(--bg-color);
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .close-nav {
+        display: block;
+    }
+
+    /* Show navlist when active */
+    .navlist.active {
+        display: flex;
+    }
+
+    .menu-button {
+        display: block;
+    }
+}
+
+a.active {
+    color: var(--main-color);
+}
+
+header.sticky {
+    padding: 20px 9.2%;
+    background-color: var(--other-color);
 }
 
 .home-section {
@@ -177,10 +242,6 @@ span {
     transform: scale(1.1) translateX(15px) translateY(-5px);
 }
 
-header.sticky {
-    padding: 20px 10%;
-    background-color: var(--other-color);
-}
 
 .line {
     height: 1rem;
@@ -216,11 +277,85 @@ u {
     border-radius: 3rem;
     height: 10rem;
     width: 25rem;
-    margin-left: 25rem;
+    margin-left: auto;
     margin-right: auto;
     box-shadow: 0 4px 8px var(--b-color);
 }
-.container-box:hover{
+
+.add-food {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 5%;
+    /* Padding for space on both ends */
+}
+
+.add-food h1,
+.add-food h2 {
+    text-align: center;
+    margin: 0.5rem 0;
+    /* Small margin to give space around headings */
+}
+
+.add-food h1 {
+    margin-top: 5rem;
+    /* Extra space at the top for aesthetic */
+}
+
+.add-food img {
+    width: 100%;
+    height: auto;
+    transition: all 0.5s ease;
+}
+
+/* Using Grid to display 2 images in a row */
+.add-food {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Two columns layout */
+    gap: 40px;
+    /* Gap between images */
+    justify-items: center;
+    /* Center images horizontally */
+    align-items: center;
+    /* Center images vertically */
+    margin-top: 2rem;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    .add-food {
+        grid-template-columns: repeat(2, 1fr);
+        /* Still two columns on mobile */
+        gap: 10px;
+        /* Adjust gap for smaller screens */
+    }
+
+    .add-food img {
+        width: 100%;
+        /* Ensure images are 100% width of the grid column */
+    }
+}
+
+.add-food img:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+    box-shadow: var(--b-color) 0px 1px 15px;
+    transform: scale(1.1) translateX(5px) translateY(-5px);
+    transition: all 0.5s ease;
+}
+
+
+.container-box i {
+    font-size: 5rem;
+    color: var(--main-color);
+}
+
+.container-box i:hover {
+    color: var(--text-color);
+}
+
+.container-box:hover {
     transform: scale(1.1) translateX(15px) translateY(-5px);
     box-shadow: 0 4px 8px var(--main-color);
     transition: all .50s ease;
@@ -234,19 +369,19 @@ u {
     height: 30rem;
     width: 30rem;
     margin-bottom: 2rem;
-    margin-right: 26.5rem;
+    margin-right: auto;
     margin-left: auto;
 }
 
 footer {
-    position: relative; /* Ensure the icon is positioned relative to the footer */
+    position: relative;
     background-color: var(--other-color);
     color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    height: 12rem;
+    padding: 20px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -267,7 +402,6 @@ nav ul li {
 nav a {
     color: var(--text-color);
     text-decoration: underline var(--main-color) 2px;
-
 }
 
 form {
@@ -307,46 +441,20 @@ button:hover {
 .social-media a {
     margin: 0 5px;
     font-size: 24px;
-    color: var(--main-color); 
-  }
-  
-  .social-media a:hover {
+    color: var(--main-color);
+}
+
+.social-media a:hover {
     color: #f0f0f0;
     box-shadow: var(--b-color) 0px 1px 25px;
     transform: scale(1.1) translateX(5px) translateY(-5px);
     transition: all .50s ease;
-  }
-
-.add-food img {
-    margin: 3rem 4em;
-    height: 30rem;
 }
 
-.add-food h1,
-h2 {
-    margin-left: 20rem;
-    margin-top: 2rem;
-}
-
-.add-food img:hover {
-    background: var(--main-color);
-    color: var(--bg-color);
-    box-shadow: var(--b-color) 0px 1px 25px;
-    transform: scale(1.1) translateX(15px) translateY(-5px);
-    transition: all .50s ease;
-}
-
-.container-box i {
-    font-size: 5rem;
-    color: var(--main-color);
-}
-.container-box i:hover{
-    color: var(--text-color);
-}
-footer i.uper{
+footer i.uper {
     position: absolute;
-    right: 15rem; /* Position it on the right side */
-    bottom: 8rem; /* Adjust its distance from the bottom */
+    right: 15rem;
+    bottom: 8rem;
     font-size: 3rem;
     color: var(--main-color);
     cursor: pointer;
@@ -355,8 +463,73 @@ footer i.uper{
     background: var(--bg-color);
     box-shadow: var(--main-color) 0px 4px 7px;
 }
+
 footer i.uper:hover {
     transform: scale(1.1);
     color: var(--text-color);
     box-shadow: var(--b-color) 0px 5px 9px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    footer {
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        display: flex;
+        flex-direction: col;
+        margin: 5px 0;
+    }
+
+    input[type="email"] {
+        width: 100%;
+    }
+
+    .social-media {
+        flex-direction: row;
+    }
+
+    .social-media a {
+        font-size: 30px;
+        margin: 10px 0;
+    }
+
+    footer i.uper {
+        right: 2rem;
+        bottom: 5rem;
+        font-size: 2.5rem;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 3px 0;
+    }
+
+    input[type="email"] {
+        width: 100%;
+    }
+
+    .social-media a {
+        font-size: 24px;
+        margin: 8px 0;
+    }
+
+    footer i.uper {
+        right: 1rem;
+        bottom: 3rem;
+        font-size: 2rem;
+    }
 }
