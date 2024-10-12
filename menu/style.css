@@ -86,7 +86,6 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.39);
     /* Semi-transparent black overlay */
     z-index: -1;
     /* Place it below any text or content */
@@ -99,8 +98,6 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.39);
-    /* Adjusted for a darker semi-transparent black overlay */
     z-index: -1;
     /* Place it below any text or content */
 }
@@ -113,6 +110,7 @@ body::before {
     padding: 20px;
     /* Add some padding around the text */
     color: #fff;
+    background-color:rgba(0, 0, 0, 0.39); ;
     /* Text color */
     z-index: 2;
     /* Place text above the overlay */
@@ -335,6 +333,9 @@ header {
     color: var(--main-color);
     font-weight: 600;
 }
+.s-btnn:hover{
+    cursor: pointer;
+}
 
 .in-text .s-btnn a {
     display: inline-block;
@@ -545,3 +546,314 @@ footer i.uper:hover {
         gap: 1rem;
     }
 }
+
+/* Modal Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  }
+  
+  .modal-content {
+    background-color: var(--bg-color);
+    margin: 10% auto; /* 10% from the top and centered */
+    padding: 25px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px; /* Max width for larger screens */
+    border-radius: 15px;
+    box-shadow: 0 4px 16px  var(--main-color);
+    position: relative;
+  }
+  
+  /* Close button in the modal */
+  .close {
+    color: var(--main-color);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: var(--text-color);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Modal header */
+  .modal-content h3 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Modal paragraph for username */
+  .modal-content p {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  /* Form styling inside the modal */
+  .modal-content form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Ensure the form takes full width */
+}
+
+/* Input and Textarea Styling */
+.modal-content input[type="text"],
+.modal-content input[type="tel"],
+.modal-content textarea {
+    padding: 15px;
+    margin-bottom: 20px;
+    width: 100%; /* Ensure inputs take up full width */
+    max-width: 100%; /* Prevent them from exceeding container */
+    border: 1px solid #ccc;
+    border-radius: 50px; /* Rounded inputs */
+    font-size: 16px;
+    background-color: var(--other-color); /* Use defined variable */
+    color: var(--text-color); /* Input text color */
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Adjust height of the Address input */
+#address {
+    height: 120px; /* Twice the size of phone input */
+    border-radius: 20px; /* Less rounded for textarea */
+    resize: none;
+    width: 20rem;
+}
+#phone{
+    width: 20rem;
+}
+
+/* Styling for the Name input */
+#name {
+    background-color: var(--other-color);
+    color: var(--text-color); /* Input text color */
+    font-weight: bold;
+    border: none;
+    cursor: not-allowed; /* Disable input */
+}
+
+/* Adjust placeholder styling */
+.modal-content input::placeholder,
+.modal-content textarea::placeholder {
+    color: var(--text-color); /* Placeholder color */
+    font-size: 14px;
+}
+
+/* Focus effects */
+.modal-content input:focus,
+.modal-content textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+}
+
+/* Additional styling for username display */
+#userName1 {
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+  /* Modal buttons styling */
+  .modal-actions {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  
+  .modal-actions button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px; /* More rounded buttons */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .modal-actions button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .modal-actions button[type="submit"]:hover {
+    background-color: #218838;
+  }
+  
+  .modal-actions button[type="button"] {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .modal-actions button[type="button"]:hover {
+    background-color: #c82333;
+  }
+  
+  /* Quantity selector styling */
+  .quantity-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .quantity-container button {
+    padding: 8px 15px;
+    font-size: 18px;
+    margin: 0 10px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .quantity-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  #quantityValue {
+    font-size: 18px;
+    margin: 0 10px;
+    min-width: 40px;
+    text-align: center;
+    padding: 10px;
+    background-color: var(--other-color);
+    border-radius: 5px;
+    color: var(--text-color);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    .modal-content {
+      width: 90%;
+    }
+  
+    .quantity-container button {
+      font-size: 16px;
+      padding: 5px;
+    }
+  
+    #quantityValue {
+      font-size: 16px;
+    }
+  
+    .modal-actions button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
+ /* SuccessModal */
+
+/* Modal Popup Styles */
+.popModal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    justify-content: center;
+    align-items: center;
+    display: flex; /* Flex to center */
+    
+}
+
+.modal-content1 {
+    background-color: var(--bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 450px; /* Adjusted max-width for a box-like modal */
+    text-align: center;
+    color: var(--text-color);
+    position: relative;
+    font-size: 1.1rem; /* Increase font size for general content */
+    box-shadow: var(--b-color) 0px 4px 10px;
+}
+
+.modal-content1 img {
+    width: 120px; /* Larger size for the image */
+    height: 120px;
+    margin-bottom: 15px;
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover;
+}
+
+.close-btn {
+    color: var(--text-color);
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: var(--main-color);
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.modal-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--main-color);
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.modal-buttons button:hover {
+    background-color: var(--secondary-color);
+}
+
+#orderDetails {
+    font-size: 1.2rem; /* Increase the font size for order details */
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#countDown {
+    font-size: 2rem; /* Larger font size for visibility */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* A unique, more noticeable font */
+    color: #ffffff; /* White font color for contrast */
+    background-color: var(--other-color); /* Background color for countdown */
+    padding: 10px 20px; /* Padding for better appearance */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center the text */
+    display: inline-block; /* Keep the background around the text */
+    margin: 20px auto; /* Center vertically and horizontally */
+    width: auto; /* Adjust width automatically */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for emphasis */
+}
+#countdown>span{
+    font-weight: 600;
+    color: var(--text-color);
+}
+body {
+    background-color: var(--bg-color);
+    font-family: Arial, sans-serif;
+}
+
