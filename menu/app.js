@@ -31,6 +31,8 @@ document.querySelectorAll(".top-icon i").forEach((icon) => {
     const orderButtons = document.querySelectorAll(".s-btnn a");
     const modal = document.getElementById("orderModal");
     const popupModal = document.getElementById("popupModal");
+    
+    popupModal.style.display="none";
     const modalItemName = document.getElementById("modalItemName");
     const userNameField = document.getElementById("userName");
     const userNameOrd = document.getElementById("userName1");
