@@ -105,7 +105,7 @@ document.querySelectorAll(".top-icon i").forEach((icon) => {
 
         // Hide the order modal and show the success popup modal
         modal.style.display = "none";
-        popupModal.style.display = "flex";
+        popupModal.style.display = "flex"; // Make the popup modal visible
 
         // Start the countdown timer
         startCountdown(40 * 60); // 40 minutes in seconds
@@ -133,21 +133,21 @@ document.querySelectorAll(".top-icon i").forEach((icon) => {
     // Close the success popup modal when any close button is clicked
     closeBtns.forEach(button => {
         button.addEventListener("click", () => {
-            popupModal.style.display = "none";
+            popupModal.style.display = "none"; // Hide the popup modal
             clearInterval(timerInterval); // Stop timer when modal is closed
         });
     });
 
-    // // Handle receipt download (placeholder logic)
-    // downloadBtn.addEventListener('click', () => {
-    //     alert('Receipt will be downloaded.');
-    //     // Implement receipt download logic here
-    // });
+    // Handle receipt download (placeholder logic)
+    downloadBtn.addEventListener('click', () => {
+        alert('Receipt will be downloaded.');
+        // Implement receipt download logic here
+    });
 
-    // // Close the order modal when clicking outside of it
-    // window.addEventListener("click", function (event) {
-    //     if (event.target == modal) {
-    //         modal.style.display = "none";
-    //     }
-    // });
+    // Close the order modal when clicking outside of it
+    window.addEventListener("click", function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    });
 });
