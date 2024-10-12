@@ -19,126 +19,132 @@
 
   <body>
     <header>
-      <a href="../index.html" class="logo"><i class="bx bxs-hot"></i>Burns&nbsp;<span>Bitez</span></a>
+      <a href="../index.html" class="logo"
+        ><i class="bx bxs-hot"></i>Burns&nbsp;<span>Bitez</span></a
+      >
       <ul class="navlist" id="navlist">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../About/index.html">About Us</a></li>
-          <li><a href="../sign/index.html">Order Now</a></li>
-          <li><a href="../Reviews/index.html">Reviews</a></li>
-          <li><a href="../Contact-us/index.html" class="active">Contact Us</a></li>
-          <!-- Add a close button inside the navbar -->
-          <li><button id="close-nav" class="close-nav">Close Menu</button></li>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../About/index.html">About Us</a></li>
+        <li><a href="../sign/index.html">Order Now</a></li>
+        <li><a href="../Reviews/index.html">Reviews</a></li>
+        <li>
+          <a href="../Contact-us/index.html" class="active">Contact Us</a>
+        </li>
+        <!-- Add a close button inside the navbar -->
+        <li><button id="close-nav" class="close-nav">Close Menu</button></li>
       </ul>
       <div class="nav-icons">
-          <a href="#"><i class="bx bx-search-alt"></i></a>
-          <a href="#"><i class="bx bx-cart"></i></a>
+        <a href="#"><i class="bx bx-search-alt"></i></a>
+        <a href="#"><i class="bx bx-cart"></i></a>
       </div>
       <!-- Create a button for mobile toggle -->
       <button id="menu-button" class="menu-button">Menu</button>
-  </header>
+    </header>
     <section class="contact-section">
-        <div class="form-container">
-            <h2>Contact Us</h2>
-            <p>We'd love to hear from you! Please fill out the form below.</p>
-    
-            <form id="contactForm" action="https://formspree.io/f/mzzbprao" method="POST">
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-    
-                <div class="form-group">
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-    
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" required>
-                </div>
-    
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-    
-                <button type="submit" class="submit-btn">Submit</button>
-            </form>
-        </div>
-    
-        <!-- Modal Popup -->
-        <div id="popupModal" class="modal">
-            <div class="modal-content">
-                <span class="close-btn">&times;</span>
-                <p>Thank you! Your message has been sent.</p>
-            </div>
-        </div>
-    </section>
-    
-    
-    <footer>
-        <a href="#"><i class="bx uper bx-chevrons-up"></i></a>
-        <nav>
-          <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../About/index.html">About</a></li>
-            <li><a href="../Contact-us/index.html">Contact Us</a></li>
-            <li><a href="../sign/index.html">Order Now</a></li>
-            <li><a href="../Reviews/index.html">Reviews</a></li>
-            <li><a href="../tour/index.html">Quick Tour</a></li>
-          </ul>
-        </nav>
-  
-        <form>
-          <label for="newsletter-email">Subscribe to our newsletter:</label>
-          <input
-            type="email"
-            id="newsletter-email"
-            name="newsletter-email"
-            placeholder="Enter your email"
-          />
-          <button type="submit">Subscribe</button>
+      <div class="form-container">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you! Please fill out the form below.</p>
+
+        <form
+          id="contactForm"
+          action="https://formspree.io/f/mzzbprao"
+          method="POST"
+        >
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Submit</button>
         </form>
-        <div class="social-media">
-          <a src="www.facebook.com"><i class="bx bxl-facebook-circle"></i></a>
-          <a src="www.twitter.com"><i class="bx bxl-twitter"></i></a>
-          <a src="www.instagram.com"><i class="bx bxl-instagram-alt"></i></a>
-          <a src="www.linkedin.com"><i class="bx bxl-linkedin-square"></i></a>
+      </div>
+
+      <!-- Modal Popup -->
+      <div id="popupModal" class="modal">
+        <div class="modal-content">
+          <img src="../img/tick.gif" alt="" />
+          <span class="close-btn">&times;</span>
+          <p>Thank you! Your message has been sent.</p>
         </div>
-  
-        <p>
-          &copy; 2025 Burns Bitez. All rights reserved.<br />
-          Created by: Muhammad Hammad-ur-Rehman.
-        </p>
-      </footer>
-  
-      <script src="script.js"></script>
-      <script src="script.js"></script>
+      </div>
+    </section>
+
+    <footer>
+      <a href="#"><i class="bx uper bx-chevrons-up"></i></a>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../About/index.html">About</a></li>
+          <li><a href="../Contact-us/index.html">Contact Us</a></li>
+          <li><a href="../sign/index.html">Order Now</a></li>
+          <li><a href="../Reviews/index.html">Reviews</a></li>
+          <li><a href="../tour/index.html">Quick Tour</a></li>
+        </ul>
+      </nav>
+
+      <form>
+        <label for="newsletter-email">Subscribe to our newsletter:</label>
+        <input
+          type="email"
+          id="newsletter-email"
+          name="newsletter-email"
+          placeholder="Enter your email"
+        />
+        <button type="submit">Subscribe</button>
+      </form>
+      <div class="social-media">
+        <a src="www.facebook.com"><i class="bx bxl-facebook-circle"></i></a>
+        <a src="www.twitter.com"><i class="bx bxl-twitter"></i></a>
+        <a src="www.instagram.com"><i class="bx bxl-instagram-alt"></i></a>
+        <a src="www.linkedin.com"><i class="bx bxl-linkedin-square"></i></a>
+      </div>
+
+      <p>
+        &copy; 2025 Burns Bitez. All rights reserved.<br />
+        Created by: Muhammad Hammad-ur-Rehman.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+    
     <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const menuButton = document.getElementById('menu-button');
-    const navlist = document.getElementById('navlist');
-    const closeNav = document.getElementById('close-nav');
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuButton = document.getElementById("menu-button");
+        const navlist = document.getElementById("navlist");
+        const closeNav = document.getElementById("close-nav");
 
-    // Toggle the navlist when clicking the menu button
-    menuButton.addEventListener('click', () => {
-        navlist.classList.toggle('active');
-    });
+        // Toggle the navlist when clicking the menu button
+        menuButton.addEventListener("click", () => {
+          navlist.classList.toggle("active");
+        });
 
-    // Close the navlist when clicking the close button
-    closeNav.addEventListener('click', () => {
-        navlist.classList.remove('active');
-    });
+        // Close the navlist when clicking the close button
+        closeNav.addEventListener("click", () => {
+          navlist.classList.remove("active");
+        });
 
-    // Close the navlist when clicking outside of it
-    document.addEventListener('click', (e) => {
-        if (!navlist.contains(e.target) && !menuButton.contains(e.target)) {
-            navlist.classList.remove('active');
-        }
-    });
-});
-
-  </script>
-    </body>
-  </html>
-  
+        // Close the navlist when clicking outside of it
+        document.addEventListener("click", (e) => {
+          if (!navlist.contains(e.target) && !menuButton.contains(e.target)) {
+            navlist.classList.remove("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

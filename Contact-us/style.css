@@ -76,7 +76,7 @@ header {
 
 .navlist a {
     color: var(--text-color);
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 500;
     padding: 10px 15px;
 }
@@ -424,6 +424,7 @@ body {
     font-size: 1.2rem;
     visibility: hidden;
 }
+
 /* Modal Popup Styles */
 .modal {
     display: none; /* Hidden by default */
@@ -444,14 +445,24 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     width: 80%;
-    max-width: 400px;
+    max-width: 350px; /* Adjusted max-width for a box-like modal */
     text-align: center;
     color: var(--text-color);
+    position: relative; /* To position the close button inside */
+}
+
+/* Adjust the image size inside the modal */
+.modal-content img {
+    max-width: 150px; /* Adjust the max width for the image */
+    max-height: 150px; /* Adjust the max height for the image */
+    margin-bottom: 20px; /* Space between image and text */
 }
 
 .close-btn {
     color: var(--text-color);
-    float: right;
+    position: absolute;
+    top: 10px;
+    right: 15px;
     font-size: 1.5rem;
     cursor: pointer;
 }
@@ -464,4 +475,3 @@ body {
 .modal.show {
     display: flex; /* Use flex to center the content */
 }
-

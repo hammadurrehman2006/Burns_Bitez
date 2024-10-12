@@ -60,7 +60,7 @@ header {
 
 .navlist a {
     color: var(--text-color);
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 500;
     padding: 10px 15px;
 }
